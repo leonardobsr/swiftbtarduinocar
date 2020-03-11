@@ -55,6 +55,7 @@ void setGoFoward(){
   accelerate();
   
   movingFoward =  true;
+  //movingBackwards = false;
 
 }
 
@@ -68,6 +69,7 @@ void setGoBackwards(){
   accelerate();
   
   movingBackwards = true;
+  //movingFoward = false;
 }
 
 void accelerate(){
@@ -111,45 +113,26 @@ void loop() {
     // Se o comando é A as rodas começam a se mover pra frente
     if( byteRead == 'A' ) {
       Serial.println("Go foward pressed");
-      startFoward = !startFoward;
       if(movingBackwards){
-        directionChanged = true;
+        stopAcceleration();
       }
-      movingBackwards = false;
+      setGoFoward();
+      checkStatus();
     } else if (byteRead == 'B') {
       Serial.println("Go backward pressed");
-      startBackward = !startBackward;
       if(movingFoward){
-        directionChanged = true;
+        stopAcceleration();
       }
-      movingFoward = false;
+      setGoBackwards();
+      checkStatus();
     } else if (byteRead == 'C'){
       Serial.println("Stop");
       stopAcceleration();
     }
     // Demais condições para as girar eixo
       
-    }
-    if(startFoward){
-      //verifica se antes ia pra trás, e desacelera
-      if(directionChanged){
-        stopAcceleration();
-        directionChanged = false;
-      }
-      setGoFoward();
-      Serial.println("Going foward");
-      checkStatus();
-      startFoward = false;
-    } else if (startBackward){
-      if(directionChanged){
-        stopAcceleration();
-        directionChanged = false;
-      }
-      setGoBackwards();
-      checkStatus();
-      Serial.println("Going backwards");
-    } else {
-    //Serial.println("No command");
-    delay(10);
+ } else {
+ //Serial.println("No command");
+ delay(10);
   }
 }
