@@ -48,8 +48,8 @@ void setGoFoward(){
   //configura os motores para o sentido horario
   digitalWrite(PINO_IN1, LOW); 
   digitalWrite(PINO_IN2, HIGH);
-  digitalWrite(PINO_IN3, HIGH);
-  digitalWrite(PINO_IN4, LOW);
+  digitalWrite(PINO_IN3, LOW);
+  digitalWrite(PINO_IN4, HIGH);
 
   //acelera
   accelerate();
@@ -63,8 +63,8 @@ void setGoBackwards(){
   //configura os motores para o sentido horario
   digitalWrite(PINO_IN1, HIGH); 
   digitalWrite(PINO_IN2, LOW);
-  digitalWrite(PINO_IN3, LOW);
-  digitalWrite(PINO_IN4, HIGH);
+  digitalWrite(PINO_IN3, HIGH);
+  digitalWrite(PINO_IN4, LOW);
   
   accelerate();
   
@@ -82,9 +82,9 @@ void accelerate(){
 
 void checkStatus(){
   Serial.print("Started going foward? ");
-  Serial.println(startFoward);
+  Serial.println(movingFoward);
   Serial.print("Is going backward? ");
-  Serial.println(startBackward);
+  Serial.println(movingBackwards);
 }
 
 void setup() {
@@ -132,7 +132,7 @@ void loop() {
     // Demais condições para as girar eixo
       
  } else {
- //Serial.println("No command");
+ Serial.println("No command");
  delay(10);
   }
 }

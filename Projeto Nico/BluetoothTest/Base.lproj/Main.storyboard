@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gpJ-qA-m06">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Traffic Light-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Traffic Light" id="BYZ-38-t0r" customClass="ViewController" customModule="BluetoothTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZXb-Lq-5Xg">
+                                <rect key="frame" x="107" y="205" width="200" height="200"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="ebB-Sm-DIA"/>
+                                    <constraint firstAttribute="height" constant="200" id="p1a-TN-gCS"/>
+                                </constraints>
+                                <state key="normal" title="UP">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="updateTrafficLight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Aev-oD-Hjf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fHm-Iv-cTV">
+                                <rect key="frame" x="107" y="446" width="200" height="200"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="6Xm-16-HBF"/>
+                                    <constraint firstAttribute="width" constant="200" id="cVo-wN-F8J"/>
+                                </constraints>
+                                <state key="normal" title="Down">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="updateTrafficLight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MGW-YT-BTx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hhz-yv-xDr">
+                                <rect key="frame" x="157" y="713" width="100" height="100"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="HfB-Gd-nuG"/>
+                                    <constraint firstAttribute="height" constant="100" id="fyW-CL-4Cu"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="updateTrafficLight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5xG-fC-g9M"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZXb-Lq-5Xg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="65" id="Gct-Au-W1z"/>
+                            <constraint firstItem="fHm-Iv-cTV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mvm-Sa-Ndt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hhz-yv-xDr" secondAttribute="bottom" constant="49" id="SB6-Uz-gmg"/>
+                            <constraint firstItem="hhz-yv-xDr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="c85-rc-fNG"/>
+                            <constraint firstItem="fHm-Iv-cTV" firstAttribute="top" secondItem="ZXb-Lq-5Xg" secondAttribute="bottom" constant="41" id="mwL-SZ-Dop"/>
+                            <constraint firstItem="ZXb-Lq-5Xg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mxa-Hc-N0c"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Speed Control" largeTitleDisplayMode="always" id="blT-dA-aHa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="479.19999999999999" y="131.78410794602701"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pfq-60-kXz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gpJ-qA-m06" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="JDV-m8-2FP">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="TYr-0a-Bw4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hna-7p-P0d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-343" y="132"/>
+        </scene>
+    </scenes>
+</document>
