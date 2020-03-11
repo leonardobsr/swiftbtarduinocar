@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gpJ-qA-m06">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Traffic Light-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Traffic Light" id="BYZ-38-t0r" customClass="ViewController" customModule="GoGo_Car" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q1y-Gh-h2g">
+                                <rect key="frame" x="-135" y="320" width="1514" height="4"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="YwD-NG-Bxl">
+                                        <rect key="frame" x="0.0" y="0.0" width="170" height="4"/>
+                                        <subviews>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" ambiguous="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3c8-rR-nBX">
+                                                <rect key="frame" x="0.0" y="0.0" width="170" height="2"/>
+                                            </progressView>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" ambiguous="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="F8Z-BD-Go2">
+                                                <rect key="frame" x="0.0" y="2" width="170" height="2"/>
+                                            </progressView>
+                                        </subviews>
+                                    </stackView>
+                                    <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="127.5" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="6b0-1X-eOb">
+                                        <rect key="frame" x="167" y="1" width="1391" height="4"/>
+                                        <connections>
+                                            <action selector="controlDirectionSpeed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UtY-b0-hkU"/>
+                                        </connections>
+                                    </slider>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillProportionally" alignment="center" spacing="292" translatesAutoresizingMaskIntoConstraints="NO" id="cSJ-gH-9Ur">
+                                <rect key="frame" x="0.0" y="832" width="374" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hhz-yv-xDr">
+                                        <rect key="frame" x="0.0" y="0.0" width="34" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Horn"/>
+                                        <connections>
+                                            <action selector="updateTrafficLight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5xG-fC-g9M"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q5n-PJ-EmV">
+                                        <rect key="frame" x="326" y="0.0" width="48" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Unlock"/>
+                                        <connections>
+                                            <action selector="updateTrafficLight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1ZE-ft-FiJ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Speed Control" largeTitleDisplayMode="always" id="blT-dA-aHa"/>
+                    <connections>
+                        <outlet property="driveProgressView" destination="F8Z-BD-Go2" id="fmx-3b-n9k"/>
+                        <outlet property="reverseProgressView" destination="3c8-rR-nBX" id="VaK-h9-hD8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="478.26086956521743" y="131.25"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pfq-60-kXz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gpJ-qA-m06" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="JDV-m8-2FP">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="TYr-0a-Bw4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hna-7p-P0d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-343" y="132"/>
+        </scene>
+        <!--Traffic Light-->
+        <scene sceneID="O8I-R7-ll4">
+            <objects>
+                <viewController title="Traffic Light" id="o4s-Dg-UsA" customClass="ViewController" customModule="GoGo_Car" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wcg-7i-gIH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZcS-Y7-nNg">
+                                <rect key="frame" x="107" y="109" width="200" height="200"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="3mq-m9-sQU"/>
+                                    <constraint firstAttribute="width" constant="200" id="VdG-HM-Yy6"/>
+                                </constraints>
+                                <state key="normal" title="UP">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="updateTrafficLight:" destination="o4s-Dg-UsA" eventType="touchUpInside" id="7P8-nD-zTn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zIr-pS-8uH">
+                                <rect key="frame" x="107" y="350" width="200" height="200"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="jwb-yb-JRa"/>
+                                    <constraint firstAttribute="height" constant="200" id="ulY-Km-TQW"/>
+                                </constraints>
+                                <state key="normal" title="Down">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="updateTrafficLight:" destination="o4s-Dg-UsA" eventType="touchUpInside" id="cup-K6-9sd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nzS-0j-FeB">
+                                <rect key="frame" x="157" y="713" width="100" height="100"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="DLI-8n-Z2z"/>
+                                    <constraint firstAttribute="width" constant="100" id="aQK-EI-gVV"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="updateTrafficLight:" destination="o4s-Dg-UsA" eventType="touchUpInside" id="Du6-LY-pEH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zIr-pS-8uH" firstAttribute="centerX" secondItem="wcg-7i-gIH" secondAttribute="centerX" id="92s-XZ-lX3"/>
+                            <constraint firstItem="zIr-pS-8uH" firstAttribute="top" secondItem="ZcS-Y7-nNg" secondAttribute="bottom" constant="41" id="FyY-F2-0pS"/>
+                            <constraint firstItem="ZcS-Y7-nNg" firstAttribute="top" secondItem="DDI-3c-Wmc" secondAttribute="top" constant="65" id="GSJ-bS-GCk"/>
+                            <constraint firstItem="DDI-3c-Wmc" firstAttribute="bottom" secondItem="nzS-0j-FeB" secondAttribute="bottom" constant="49" id="hEp-WX-9NY"/>
+                            <constraint firstItem="ZcS-Y7-nNg" firstAttribute="centerX" secondItem="wcg-7i-gIH" secondAttribute="centerX" id="hPy-1H-Y3A"/>
+                            <constraint firstItem="nzS-0j-FeB" firstAttribute="centerX" secondItem="wcg-7i-gIH" secondAttribute="centerX" id="kL1-97-u1k"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DDI-3c-Wmc"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Speed Control" largeTitleDisplayMode="always" id="xYc-rs-4gZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pXH-eH-RR6" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1377" y="-186"/>
+        </scene>
+    </scenes>
+</document>
