@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q1y-Gh-h2g">
-                                <rect key="frame" x="-135" y="320" width="1514" height="4"/>
+                                <rect key="frame" x="-135" y="320" width="1565" height="4"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="YwD-NG-Bxl">
                                         <rect key="frame" x="0.0" y="0.0" width="170" height="4"/>
@@ -31,7 +31,7 @@
                                         </subviews>
                                     </stackView>
                                     <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="127.5" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="6b0-1X-eOb">
-                                        <rect key="frame" x="167" y="1" width="1391" height="4"/>
+                                        <rect key="frame" x="168" y="0.0" width="1399" height="5"/>
                                         <connections>
                                             <action selector="controlDirectionSpeed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UtY-b0-hkU"/>
                                         </connections>
@@ -73,7 +73,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="478.26086956521743" y="131.25"/>
+            <point key="canvasLocation" x="645" y="421"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pfq-60-kXz">
@@ -86,7 +86,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="TYr-0a-Bw4"/>
+                        <segue destination="o4s-Dg-UsA" kind="relationship" relationship="rootViewController" id="9He-6P-O5F"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hna-7p-P0d" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -102,7 +102,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZcS-Y7-nNg">
-                                <rect key="frame" x="107" y="109" width="200" height="200"/>
+                                <rect key="frame" x="107" y="205" width="200" height="200"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="3mq-m9-sQU"/>
@@ -116,7 +116,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zIr-pS-8uH">
-                                <rect key="frame" x="107" y="350" width="200" height="200"/>
+                                <rect key="frame" x="107" y="446" width="200" height="200"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="jwb-yb-JRa"/>
