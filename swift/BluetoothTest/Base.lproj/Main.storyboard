@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gpJ-qA-m06">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="00H-7n-KwG">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q1y-Gh-h2g">
-                                <rect key="frame" x="-135" y="320" width="1565" height="4"/>
+                                <rect key="frame" x="-135" y="320" width="1569" height="4"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="YwD-NG-Bxl">
                                         <rect key="frame" x="0.0" y="0.0" width="170" height="4"/>
@@ -31,7 +31,7 @@
                                         </subviews>
                                     </stackView>
                                     <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="127.5" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="6b0-1X-eOb">
-                                        <rect key="frame" x="168" y="0.0" width="1399" height="5"/>
+                                        <rect key="frame" x="168" y="0.0" width="1403" height="5"/>
                                         <connections>
                                             <action selector="controlDirectionSpeed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UtY-b0-hkU"/>
                                         </connections>
@@ -47,7 +47,7 @@
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Horn"/>
                                         <connections>
-                                            <action selector="updateTrafficLight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5xG-fC-g9M"/>
+                                            <action selector="speedUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5xG-fC-g9M"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q5n-PJ-EmV">
@@ -56,7 +56,7 @@
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Unlock"/>
                                         <connections>
-                                            <action selector="updateTrafficLight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1ZE-ft-FiJ"/>
+                                            <action selector="speedUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1ZE-ft-FiJ"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -73,7 +73,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="645" y="421"/>
+            <point key="canvasLocation" x="1377" y="684"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pfq-60-kXz">
@@ -91,12 +91,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hna-7p-P0d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-343" y="132"/>
+            <point key="canvasLocation" x="393" y="-186"/>
         </scene>
         <!--Traffic Light-->
         <scene sceneID="O8I-R7-ll4">
             <objects>
-                <viewController title="Traffic Light" id="o4s-Dg-UsA" customClass="ViewController" customModule="GoGo_Car" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Traffic Light" id="o4s-Dg-UsA" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wcg-7i-gIH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -111,9 +111,6 @@
                                 <state key="normal" title="UP">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <connections>
-                                    <action selector="updateTrafficLight:" destination="o4s-Dg-UsA" eventType="touchUpInside" id="7P8-nD-zTn"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zIr-pS-8uH">
                                 <rect key="frame" x="107" y="446" width="200" height="200"/>
@@ -125,22 +122,6 @@
                                 <state key="normal" title="Down">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
-                                <connections>
-                                    <action selector="updateTrafficLight:" destination="o4s-Dg-UsA" eventType="touchUpInside" id="cup-K6-9sd"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nzS-0j-FeB">
-                                <rect key="frame" x="157" y="713" width="100" height="100"/>
-                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="DLI-8n-Z2z"/>
-                                    <constraint firstAttribute="width" constant="100" id="aQK-EI-gVV"/>
-                                </constraints>
-                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Stop"/>
-                                <connections>
-                                    <action selector="updateTrafficLight:" destination="o4s-Dg-UsA" eventType="touchUpInside" id="Du6-LY-pEH"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -148,9 +129,7 @@
                             <constraint firstItem="zIr-pS-8uH" firstAttribute="centerX" secondItem="wcg-7i-gIH" secondAttribute="centerX" id="92s-XZ-lX3"/>
                             <constraint firstItem="zIr-pS-8uH" firstAttribute="top" secondItem="ZcS-Y7-nNg" secondAttribute="bottom" constant="41" id="FyY-F2-0pS"/>
                             <constraint firstItem="ZcS-Y7-nNg" firstAttribute="top" secondItem="DDI-3c-Wmc" secondAttribute="top" constant="65" id="GSJ-bS-GCk"/>
-                            <constraint firstItem="DDI-3c-Wmc" firstAttribute="bottom" secondItem="nzS-0j-FeB" secondAttribute="bottom" constant="49" id="hEp-WX-9NY"/>
                             <constraint firstItem="ZcS-Y7-nNg" firstAttribute="centerX" secondItem="wcg-7i-gIH" secondAttribute="centerX" id="hPy-1H-Y3A"/>
-                            <constraint firstItem="nzS-0j-FeB" firstAttribute="centerX" secondItem="wcg-7i-gIH" secondAttribute="centerX" id="kL1-97-u1k"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DDI-3c-Wmc"/>
                     </view>
@@ -158,7 +137,99 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pXH-eH-RR6" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1377" y="-186"/>
+            <point key="canvasLocation" x="1265" y="-532"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="X2k-VJ-YcK">
+            <objects>
+                <viewController id="ksX-yg-JQ7" customClass="ViewController" customModule="GoGo_Car" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6Xd-wE-d6g">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Car control" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AoO-LU-hLB">
+                                <rect key="frame" x="20" y="83" width="115" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2G1-is-Sun">
+                                <rect key="frame" x="20" y="787" width="208" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="sound"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZKP-Ji-iYr">
+                                <rect key="frame" x="295" y="787" width="75" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="lock"/>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sliderBG" translatesAutoresizingMaskIntoConstraints="NO" id="e4G-Un-Zmn">
+                                <rect key="frame" x="131.5" y="203" width="151" height="490"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="151" id="JGF-nL-j8Y"/>
+                                    <constraint firstAttribute="height" constant="490" id="XVP-K8-zIX"/>
+                                </constraints>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="KgK-Br-RZa">
+                                <rect key="frame" x="-40" y="433" width="494" height="31"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="490" id="eT3-JA-ery"/>
+                                </constraints>
+                                <color key="minimumTrackTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="maximumTrackTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="controlDirectionSpeed:" destination="ksX-yg-JQ7" eventType="valueChanged" id="69i-sU-Hec"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="e4G-Un-Zmn" firstAttribute="centerX" secondItem="6Xd-wE-d6g" secondAttribute="centerX" id="523-kT-ZVt"/>
+                            <constraint firstItem="KgK-Br-RZa" firstAttribute="centerX" secondItem="6Xd-wE-d6g" secondAttribute="centerX" id="VHS-j3-hNZ"/>
+                            <constraint firstItem="KgK-Br-RZa" firstAttribute="centerY" secondItem="6Xd-wE-d6g" secondAttribute="centerY" id="VOu-9q-JaP"/>
+                            <constraint firstItem="e4G-Un-Zmn" firstAttribute="centerY" secondItem="6Xd-wE-d6g" secondAttribute="centerY" id="wUP-u7-PmV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Tzo-0W-qfI"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jVj-UE-Vdr"/>
+                    <connections>
+                        <outlet property="imageview" destination="e4G-Un-Zmn" id="IqL-Yd-0mP"/>
+                        <outlet property="lockUnlockButton" destination="ZKP-Ji-iYr" id="Vfb-pS-BzU"/>
+                        <outlet property="slider" destination="KgK-Br-RZa" id="mex-fT-peV"/>
+                        <outlet property="soundButtom" destination="2G1-is-Sun" id="Fva-WA-XfV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aue-0l-T2n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3163.7681159420295" y="-201.5625"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="z7g-wv-nYN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="00H-7n-KwG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eFh-bF-es6">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ksX-yg-JQ7" kind="relationship" relationship="rootViewController" id="pM1-uv-PvK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E3y-li-DYM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2253.6231884057975" y="-201.5625"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="lock" width="22" height="25"/>
+        <image name="sliderBG" width="75.5" height="245"/>
+        <image name="sound" width="18" height="16"/>
+    </resources>
 </document>
