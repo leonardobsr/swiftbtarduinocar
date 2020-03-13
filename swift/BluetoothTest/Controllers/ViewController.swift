@@ -65,7 +65,7 @@ final class ViewController: CustomNavigationController {
         
         
          self.communicator = ArduinoCommunicator(delegate: self)
-//         self.loadingComponent.addLoadingIndicator(to: self.view)
+         self.loadingComponent.addLoadingIndicator(to: self.view)
     }
     
     // MARK: - Actions
