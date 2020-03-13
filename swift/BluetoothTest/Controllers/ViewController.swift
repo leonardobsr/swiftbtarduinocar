@@ -39,8 +39,22 @@ final class ViewController: CustomNavigationController {
         super.viewDidLoad()
         
         
+        lockBtn.setImage(#imageLiteral(resourceName: "unlocked"), for: .normal)
+        lockBtn.setImage(#imageLiteral(resourceName: "lock"), for: .selected)
+        
         slider.setThumbImage(#imageLiteral(resourceName: "thumbImage"), for: .normal)
         slider.setThumbImage(#imageLiteral(resourceName: "thumbImage"), for: .highlighted)
+    }
+    
+    @IBAction func lockTapped(_ sender: UIButton) {
+        UIView.animate(withDuration: 0.2, delay: 0.01, options: .curveLinear, animations: {
+            sender.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+        }) { (success) in
+            UIView.animate(withDuration: 0.2, delay: 0.01, options: .curveLinear, animations: {
+                sender.isSelected = !sender.isSelected
+                sender.transform = .identity
+            }, completion: nil)
+        }
     }
     
     
