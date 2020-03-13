@@ -1,11 +1,3 @@
-//
-//  ArduinoCommunicator.swift
-//  BluetoothTest
-//
-//  Created by Nicolas Nascimento on 18/12/17.
-//  Copyright © 2017 Nicolas Nascimento. All rights reserved.
-//
-
 import Foundation
 import CoreBluetooth
 

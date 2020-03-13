@@ -1,15 +1,7 @@
-//
-//  ViewController.swift
-//  BluetoothTest
-//
-//  Created by Nicolas Nascimento on 15/12/17.
-//  Copyright © 2017 Nicolas Nascimento. All rights reserved.
-//
-
 import UIKit
 import CoreBluetooth
 
-final class ViewController: UIViewController {
+final class ViewController: CustomNavigationController {
     // MARK: - Private Properties
     private var communicator: ArduinoCommunicator!
     private var loadingComponent: LoadingComponent!
@@ -18,12 +10,16 @@ final class ViewController: UIViewController {
     
     @IBOutlet weak var reverseProgressView: UIProgressView!
     @IBOutlet weak var driveProgressView: UIProgressView!
+    @IBOutlet weak var soundBtn: UIButton!
+    @IBOutlet weak var lockBtn: UIButton!
     
     @IBOutlet weak var imageview: UIImageView!
     
     @IBOutlet weak var soundButtom: UIButton! {
         didSet {
             soundButtom.layer.cornerRadius = 19
+//            soundButtom.applyGradient(colours: [.yellow, .blue])
+//            soundButtom.applyGradient(colours: [.yellow, .blue, .red], locations: [0.0, 0.5, 1.0])
         }
     }
     @IBOutlet weak var lockUnlockButton: UIButton! {
@@ -42,6 +38,7 @@ final class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         slider.setThumbImage(#imageLiteral(resourceName: "thumbImage"), for: .normal)
         slider.setThumbImage(#imageLiteral(resourceName: "thumbImage"), for: .highlighted)
     }
@@ -54,7 +51,7 @@ final class ViewController: UIViewController {
         
         
          self.communicator = ArduinoCommunicator(delegate: self)
-         self.loadingComponent.addLoadingIndicator(to: self.view)
+//         self.loadingComponent.addLoadingIndicator(to: self.view)
     }
     
     // MARK: - Actions
@@ -85,6 +82,11 @@ final class ViewController: UIViewController {
     
     func stopAction(_ sender: UIButton) {
         self.communicator.send(value: "C")
+    }
+    
+    private func setupButtonBackground() {
+        self.soundBtn.applyGradient(colours: [.yellow, .blue])
+        self.soundBtn.applyGradient(colours: [.yellow, .blue, .red], locations: [0.0, 0.5, 1.0])
     }
 }
 

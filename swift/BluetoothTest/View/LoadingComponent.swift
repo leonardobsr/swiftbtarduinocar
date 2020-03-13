@@ -1,11 +1,3 @@
-//
-//  LoadingView.swift
-//  BluetoothTest
-//
-//  Created by Nicolas Nascimento on 15/02/18.
-//  Copyright © 2018 Nicolas Nascimento. All rights reserved.
-//
-
 import UIKit
 
 class LoadingComponent {

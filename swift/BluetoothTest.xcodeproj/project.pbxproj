@@ -16,6 +16,8 @@
 		0C971C892035FD36008EEA39 /* LoadingComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C971C882035FD36008EEA39 /* LoadingComponent.swift */; };
 		81B4C6D1241AB36900F802CE /* SoundButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B4C6D0241AB36900F802CE /* SoundButtonComponent.swift */; };
 		81B4C6D5241ABF5D00F802CE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B4C6D4241ABF5D00F802CE /* HomeViewController.swift */; };
+		81B4C6DC241BB24F00F802CE /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B4C6DB241BB24F00F802CE /* CustomNavigationController.swift */; };
+		81B4C6DE241BC52F00F802CE /* UIViewGradientColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B4C6DD241BC52F00F802CE /* UIViewGradientColors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		0C971C882035FD36008EEA39 /* LoadingComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingComponent.swift; sourceTree = "<group>"; };
 		81B4C6D0241AB36900F802CE /* SoundButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundButtonComponent.swift; sourceTree = "<group>"; };
 		81B4C6D4241ABF5D00F802CE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		81B4C6DB241BB24F00F802CE /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
+		81B4C6DD241BC52F00F802CE /* UIViewGradientColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewGradientColors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +50,7 @@
 		0C380C011FE4467200BBCB96 = {
 			isa = PBXGroup;
 			children = (
+				81B4C6DA241BB23C00F802CE /* Extensions */,
 				81B4C6CD241AB24F00F802CE /* Components */,
 				0C380C0C1FE4467200BBCB96 /* BluetoothTest */,
 				0C380C0B1FE4467200BBCB96 /* Products */,
@@ -114,6 +119,15 @@
 				81B4C6D0241AB36900F802CE /* SoundButtonComponent.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		81B4C6DA241BB23C00F802CE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				81B4C6DB241BB24F00F802CE /* CustomNavigationController.swift */,
+				81B4C6DD241BC52F00F802CE /* UIViewGradientColors.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +213,8 @@
 				0C380C221FE7D81100BBCB96 /* ArduinoCommunicator.swift in Sources */,
 				81B4C6D1241AB36900F802CE /* SoundButtonComponent.swift in Sources */,
 				81B4C6D5241ABF5D00F802CE /* HomeViewController.swift in Sources */,
+				81B4C6DE241BC52F00F802CE /* UIViewGradientColors.swift in Sources */,
+				81B4C6DC241BB24F00F802CE /* CustomNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
