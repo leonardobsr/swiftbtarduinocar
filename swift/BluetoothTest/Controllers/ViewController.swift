@@ -57,7 +57,6 @@ final class ViewController: CustomNavigationController {
         }
     }
     
-    
     // MARK: - View Controller Life Cycle
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
