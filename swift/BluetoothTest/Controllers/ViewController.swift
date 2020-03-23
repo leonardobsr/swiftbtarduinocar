@@ -18,8 +18,6 @@ final class ViewController: CustomNavigationController {
     @IBOutlet weak var soundButtom: UIButton! {
         didSet {
             soundButtom.layer.cornerRadius = 19
-//            soundButtom.applyGradient(colours: [.yellow, .blue])
-//            soundButtom.applyGradient(colours: [.yellow, .blue, .red], locations: [0.0, 0.5, 1.0])
         }
     }
     @IBOutlet weak var lockUnlockButton: UIButton! {
@@ -84,11 +82,20 @@ final class ViewController: CustomNavigationController {
         let value = sender.value
         
         if value > 0.6 {
-            self.communicator.send(value: "B")
+            if !isRunning {
+                self.communicator.send(value: "B")
+                isRunning = true
+            }
         } else if value < 0.4 {
-            self.communicator.send(value: "A")
+            if !isRunning {
+                self.communicator.send(value: "A")
+                isRunning = true
+            }
         } else {
-            self.communicator.send(value: "C")
+            if isRunning {
+                self.communicator.send(value: "C")
+                isRunning = false
+            }
         }
         print(value)
     }
